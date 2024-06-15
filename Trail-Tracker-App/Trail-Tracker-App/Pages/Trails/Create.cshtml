@@ -1,0 +1,53 @@
+﻿@page
+@model Trail_Tracker_App.Pages.Trails.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Trail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Trail.MountainId" class="control-label"></label>
+                <select asp-for="Trail.MountainId" class ="form-control" asp-items="ViewBag.MountainId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trail.Name" class="control-label"></label>
+                <input asp-for="Trail.Name" class="form-control" />
+                <span asp-validation-for="Trail.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trail.Difficulty" class="control-label"></label>
+                <input asp-for="Trail.Difficulty" class="form-control" />
+                <span asp-validation-for="Trail.Difficulty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trail.Length" class="control-label"></label>
+                <input asp-for="Trail.Length" class="form-control" />
+                <span asp-validation-for="Trail.Length" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trail.Description" class="control-label"></label>
+                <input asp-for="Trail.Description" class="form-control" />
+                <span asp-validation-for="Trail.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
