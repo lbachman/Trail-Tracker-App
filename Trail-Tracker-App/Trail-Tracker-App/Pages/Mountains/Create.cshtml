@@ -13,33 +13,40 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
-                <label asp-for="Mountain.RangeId" class="control-label"></label>
-                <select asp-for="Mountain.RangeId" class ="form-control" asp-items="ViewBag.RangeId"></select>
+                <label asp-for="Mountain.Range.Name" class="control-label">Mountian Range</label>
+                <select asp-for="MountainDTO.Range" class ="form-control" asp-items="ViewBag.Name"></select>
             </div>
+
             <div class="form-group">
-                <label asp-for="Mountain.Name" class="control-label"></label>
-                <input asp-for="Mountain.Name" class="form-control" />
-                <span asp-validation-for="Mountain.Name" class="text-danger"></span>
+                <label asp-for="MountainDTO.Name" class="control-label"></label>
+                <input asp-for="MountainDTO.Name" class="form-control" />
+                <span asp-validation-for="MountainDTO.Name" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Mountain.Location" class="control-label"></label>
-                <input asp-for="Mountain.Location" class="form-control" />
-                <span asp-validation-for="Mountain.Location" class="text-danger"></span>
+                <label asp-for="MountainDTO.Location" class="control-label"></label>
+                <input asp-for="MountainDTO.Location" class="form-control" />
+                <span asp-validation-for="MountainDTO.Location" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Mountain.Height" class="control-label"></label>
-                <input asp-for="Mountain.Height" class="form-control" />
-                <span asp-validation-for="Mountain.Height" class="text-danger"></span>
+                <label asp-for="MountainDTO.Height" class="control-label">Height (ft)</label>
+                <input asp-for="MountainDTO.Height" class="form-control" />
+                <span asp-validation-for="MountainDTO.Height" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Mountain.Description" class="control-label"></label>
-                <input asp-for="Mountain.Description" class="form-control" />
-                <span asp-validation-for="Mountain.Description" class="text-danger"></span>
+                <label asp-for="MountainDTO.Description" class="control-label"></label>
+                <input asp-for="MountainDTO.Description" class="form-control" />
+                <span asp-validation-for="MountainDTO.Description" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+
         </form>
     </div>
 </div>

@@ -1,0 +1,48 @@
+﻿@page
+@model Trail_Tracker_App.Pages.Pictures.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Picture</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Picture.TrailId" class="control-label"></label>
+                <select asp-for="Picture.TrailId" class ="form-control" asp-items="ViewBag.TrailId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Picture.FilePath" class="control-label"></label>
+                <input asp-for="Picture.FilePath" class="form-control" />
+                <span asp-validation-for="Picture.FilePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Picture.UploadedBy" class="control-label"></label>
+                <input asp-for="Picture.UploadedBy" class="form-control" />
+                <span asp-validation-for="Picture.UploadedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Picture.UploadDate" class="control-label"></label>
+                <input asp-for="Picture.UploadDate" class="form-control" />
+                <span asp-validation-for="Picture.UploadDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
