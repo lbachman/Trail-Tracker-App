@@ -37,10 +37,7 @@ namespace Trail_Tracker_App.Pages.Mountains
                 Console.WriteLine("error");
             }
 
-            Mountain
-            {
-                
-            }
+            
 
             _context.Mountains.Add(Mountain);
             await _context.SaveChangesAsync();
