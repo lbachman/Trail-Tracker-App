@@ -24,7 +24,7 @@ namespace Trail_Tracker_App.Pages.Mountains
         }
 
         
-        public Mountain Mountain { get; set; } = default!;
+        //public Mountain Mountain { get; set; } = default!;
 
         [BindProperty]
         public MountainDTO MountainDTO { get; set; } = default!;
@@ -33,13 +33,25 @@ namespace Trail_Tracker_App.Pages.Mountains
         {
             if (!ModelState.IsValid)
             {
+                Console.WriteLine("error: model state is not valid");
                 return Page();
-                Console.WriteLine("error");
+                
             }
+            
+            // get mountain range name by id
+            var range = _context.Mountainranges.Where(x => x.Name == MountainDTO.Range).FirstOrDefault();
+            var mountain = new Mountain()
+            {
+                RangeId = range.RangeId,
+                Name = MountainDTO.Name,
+                Location = MountainDTO.Location,
+                Height = MountainDTO.Height,
+                Description = MountainDTO.Description
+            };
 
             
 
-            _context.Mountains.Add(Mountain);
+            _context.Mountains.Add(mountain);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

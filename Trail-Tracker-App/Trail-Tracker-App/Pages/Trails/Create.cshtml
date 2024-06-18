@@ -14,28 +14,28 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Trail.MountainId" class="control-label"></label>
-                <select asp-for="Trail.MountainId" class ="form-control" asp-items="ViewBag.MountainId"></select>
+                <label asp-for="TrailDTO.MountainName" class="control-label"></label>
+                <select asp-for="TrailDTO.MountainName" class ="form-control" asp-items="ViewBag.MountainName"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Trail.Name" class="control-label"></label>
-                <input asp-for="Trail.Name" class="form-control" />
-                <span asp-validation-for="Trail.Name" class="text-danger"></span>
+                <label asp-for="TrailDTO.Name" class="control-label"></label>
+                <input asp-for="TrailDTO.Name" class="form-control" />
+                <span asp-validation-for="TrailDTO.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Trail.Difficulty" class="control-label"></label>
-                <input asp-for="Trail.Difficulty" class="form-control" />
-                <span asp-validation-for="Trail.Difficulty" class="text-danger"></span>
+                <label asp-for="TrailDTO.Difficulty" class="control-label"></label>
+                <input asp-for="TrailDTO.Difficulty" class="form-control" />
+                <span asp-validation-for="TrailDTO.Difficulty" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Trail.Length" class="control-label"></label>
-                <input asp-for="Trail.Length" class="form-control" />
-                <span asp-validation-for="Trail.Length" class="text-danger"></span>
+                <label asp-for="TrailDTO.Length" class="control-label"></label>
+                <input asp-for="TrailDTO.Length" class="form-control" />
+                <span asp-validation-for="TrailDTO.Length" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Trail.Description" class="control-label"></label>
-                <input asp-for="Trail.Description" class="form-control" />
-                <span asp-validation-for="Trail.Description" class="text-danger"></span>
+                <label asp-for="TrailDTO.Description" class="control-label"></label>
+                <input asp-for="TrailDTO.Description" class="form-control" />
+                <span asp-validation-for="TrailDTO.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

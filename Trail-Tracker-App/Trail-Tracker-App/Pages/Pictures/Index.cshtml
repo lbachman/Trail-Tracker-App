@@ -14,16 +14,18 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Picture[0].FilePath)
+                @Html.DisplayNameFor(model => model.Picture[0].Trail)
             </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.Picture[0].UploadedBy)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Picture[0].UploadDate)
             </th>
+            
             <th>
-                @Html.DisplayNameFor(model => model.Picture[0].Trail)
+                @Html.DisplayNameFor(model => model.Picture[0].FilePath)
             </th>
             <th></th>
         </tr>
@@ -41,7 +43,7 @@
                 @Html.DisplayFor(modelItem => item.UploadDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Trail.TrailId)
+                @Html.DisplayFor(modelItem => item.Trail.Name)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.PictureId">Edit</a> |

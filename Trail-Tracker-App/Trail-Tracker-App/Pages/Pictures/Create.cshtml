@@ -11,30 +11,26 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
-                <label asp-for="Picture.TrailId" class="control-label"></label>
-                <select asp-for="Picture.TrailId" class ="form-control" asp-items="ViewBag.TrailId"></select>
+                <label asp-for="PictureDTO.TrailName" class="control-label">Trail </label>
+                <select asp-for="PictureDTO.TrailName" class="form-control" asp-items="ViewBag.TrailName"></select>
             </div>
+   
+
             <div class="form-group">
-                <label asp-for="Picture.FilePath" class="control-label"></label>
-                <input asp-for="Picture.FilePath" class="form-control" />
-                <span asp-validation-for="Picture.FilePath" class="text-danger"></span>
+                <label asp-for="PictureDTO.FormFile" class="control-label"></label>
+                <input type="file" asp-for="PictureDTO.FormFile" class="form-control" />
+                <span asp-validation-for="PictureDTO.FormFile" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Picture.UploadedBy" class="control-label"></label>
-                <input asp-for="Picture.UploadedBy" class="form-control" />
-                <span asp-validation-for="Picture.UploadedBy" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Picture.UploadDate" class="control-label"></label>
-                <input asp-for="Picture.UploadDate" class="form-control" />
-                <span asp-validation-for="Picture.UploadDate" class="text-danger"></span>
-            </div>
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+
         </form>
     </div>
 </div>

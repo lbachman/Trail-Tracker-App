@@ -17,17 +17,18 @@
                 @Html.DisplayNameFor(model => model.Trail[0].Name)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Trail[0].Mountain)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Trail[0].Difficulty)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trail[0].Length)
+                @Html.DisplayNameFor(model => model.Trail[0].Length) ("Miles")
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Trail[0].Description)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Trail[0].Mountain)
-            </th>
+            
             <th></th>
         </tr>
     </thead>
@@ -47,7 +48,7 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Mountain.MountainId)
+                @Html.DisplayFor(modelItem => item.Mountain.Name)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.TrailId">Edit</a> |

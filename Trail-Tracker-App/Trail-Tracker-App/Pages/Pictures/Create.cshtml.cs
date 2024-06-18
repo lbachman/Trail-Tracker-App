@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,23 +8,25 @@ namespace Trail_Tracker_App.Pages.Pictures
 {
     public class CreateModel : PageModel
     {
-        private readonly Trail_Tracker_App.Entities.MountaintrailsContext _context;
+        private readonly MountaintrailsContext _context;
+        private readonly IWebHostEnvironment _environment;
 
-        public CreateModel(Trail_Tracker_App.Entities.MountaintrailsContext context)
+        public CreateModel(MountaintrailsContext context, IWebHostEnvironment environment)
         {
             _context = context;
+            _environment = environment;
         }
 
         public IActionResult OnGet()
         {
-        ViewData["TrailId"] = new SelectList(_context.Trails, "TrailId", "TrailId");
+        ViewData["TrailName"] = new SelectList(_context.Trails, "Name", "Name");
             return Page();
         }
 
         [BindProperty]
-        public Picture Picture { get; set; } = default!;
+        public PictureDTO PictureDTO { get; set; } = default!;
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -35,10 +34,48 @@ namespace Trail_Tracker_App.Pages.Pictures
                 return Page();
             }
 
-            _context.Pictures.Add(Picture);
-            await _context.SaveChangesAsync();
+            if (PictureDTO == null || PictureDTO.FormFile == null)
+            {
+                ModelState.AddModelError("", "No file uploaded.");
+                return Page();
+            }
 
-            return RedirectToPage("./Index");
+            if (PictureDTO.FormFile != null && PictureDTO.FormFile.Length > 0)
+            {
+
+                var filePath = Path.Combine(_environment.WebRootPath, "Uploads", PictureDTO.FormFile.FileName);
+
+                // Ensure the directory exists
+                var directory = Path.GetDirectoryName(filePath);
+                if (!Directory.Exists(directory))
+                {
+                    Directory.CreateDirectory(directory);
+                }
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await PictureDTO.FormFile.CopyToAsync(fileStream);
+                }
+                // grab datetime
+                DateTime dateTime = DateTime.Now;
+                // get trail id by name
+                var trail = _context.Trails.Where(x => x.Name == PictureDTO.TrailName).FirstOrDefault();
+                var Picture = new Picture()
+                {
+                    TrailId = trail.TrailId,
+                    FilePath = $"/Uploads/{PictureDTO.FormFile.FileName}",
+                    UploadedBy = "Not yet Implimented",
+                    UploadDate = dateTime
+
+                };
+
+                _context.Pictures.Add(Picture);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+
+            }
+            else { return Page(); }
+
         }
     }
 }

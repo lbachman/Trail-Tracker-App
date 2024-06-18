@@ -22,8 +22,8 @@ namespace Trail_Tracker_App.Pages.Trails
 
         public async Task OnGetAsync()
         {
-            Trail = await _context.Trails
-                .Include(t => t.Mountain).ToListAsync();
+            Trail = await _context.Trails.Include(t => t.Mountain).ToListAsync();
+
         }
     }
 }

@@ -37,6 +37,22 @@
         </dd>
     </dl>
 </div>
+
+
+<div class="container">
+    <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="@Model.Picture.FilePath" class="card-img-top" alt="Picturee" style="max-width: 100%; height: auto;">
+                    <div class="card-body">
+                        <p class="card-text">Model.Picture.Trail.Name</p>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Picture.PictureId">Edit</a> |
     <a asp-page="./Index">Back to List</a>

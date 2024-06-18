@@ -20,14 +20,13 @@ namespace Trail_Tracker_App.Pages.Trails
 
         public IActionResult OnGet()
         {
-        ViewData["MountainId"] = new SelectList(_context.Mountains, "MountainId", "MountainId");
+        ViewData["MountainName"] = new SelectList(_context.Mountains, "Name", "Name");
             return Page();
         }
 
         [BindProperty]
-        public Trail Trail { get; set; } = default!;
-
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        public TrailDTO TrailDTO { get; set; } = default!;
+       
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -35,7 +34,19 @@ namespace Trail_Tracker_App.Pages.Trails
                 return Page();
             }
 
-            _context.Trails.Add(Trail);
+            // get id by mountain name
+            var mountain = _context.Mountains.Where(x => x.Name == TrailDTO.MountainName).FirstOrDefault();
+
+            Trail trail = new Trail()
+            {
+                MountainId = mountain.MountainId,
+                Name = TrailDTO.Name,
+                Difficulty = TrailDTO.Difficulty,
+                Length = TrailDTO.Length,
+                Description = TrailDTO.Description,
+            };
+
+            _context.Trails.Add(trail);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
