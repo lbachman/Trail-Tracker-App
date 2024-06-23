@@ -23,7 +23,7 @@
                 @Html.DisplayNameFor(model => model.Trail[0].Difficulty)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trail[0].Length) ("Miles")
+                @Html.DisplayNameFor(model => model.Trail[0].Length) (mi)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Trail[0].Description)
@@ -35,21 +35,27 @@
     <tbody>
 @foreach (var item in Model.Trail) {
         <tr>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Difficulty)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Length)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Mountain.Name)
             </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Difficulty)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Length)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.TrailId">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.TrailId">Details</a> |

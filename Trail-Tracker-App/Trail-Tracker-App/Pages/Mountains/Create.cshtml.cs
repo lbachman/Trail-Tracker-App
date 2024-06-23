@@ -16,15 +16,10 @@ namespace Trail_Tracker_App.Pages.Mountains
 
         public IActionResult OnGet()
         {
-        //  ViewData["RangeId"] = new SelectList(_context.Mountainranges, "RangeId", "RangeId");
-        //    return Page();
         // coresponds to the viewbag thing
             ViewData["Name"] = new SelectList(_context.Mountainranges, "Name", "Name");
             return Page();
         }
-
-        
-        //public Mountain Mountain { get; set; } = default!;
 
         [BindProperty]
         public MountainDTO MountainDTO { get; set; } = default!;
@@ -48,8 +43,6 @@ namespace Trail_Tracker_App.Pages.Mountains
                 Height = MountainDTO.Height,
                 Description = MountainDTO.Description
             };
-
-            
 
             _context.Mountains.Add(mountain);
             await _context.SaveChangesAsync();

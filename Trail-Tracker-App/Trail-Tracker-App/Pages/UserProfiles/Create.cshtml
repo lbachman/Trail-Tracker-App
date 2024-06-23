@@ -1,5 +1,5 @@
 ﻿@page
-@model Trail_Tracker_App.Pages.UserProfiles.CreateModel
+@model Trail_Tracker_App.Entities.UserprofileDTO
 
 @{
     ViewData["Title"] = "Create";
@@ -13,19 +13,21 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
             <div class="form-group">
-                <label asp-for="Userprofile.UserId" class="control-label"></label>
-                <select asp-for="Userprofile.UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+                <label asp-for="UserName" class="control-label"></label>
+                <select asp-for="UserName" class ="form-control" asp-items="ViewBag.UserName"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Bio" class="control-label"></label>
+                <input asp-for="Bio" class="form-control" />
+                <span asp-validation-for="Bio" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Userprofile.Bio" class="control-label"></label>
-                <input asp-for="Userprofile.Bio" class="form-control" />
-                <span asp-validation-for="Userprofile.Bio" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Userprofile.ProfilePicture" class="control-label"></label>
-                <input asp-for="Userprofile.ProfilePicture" class="form-control" />
-                <span asp-validation-for="Userprofile.ProfilePicture" class="text-danger"></span>
+                <label asp-for="ProfilePicture" class="control-label"></label>
+                <input asp-for="ProfilePicture" class="form-control" />
+                <span asp-validation-for="ProfilePicture" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
