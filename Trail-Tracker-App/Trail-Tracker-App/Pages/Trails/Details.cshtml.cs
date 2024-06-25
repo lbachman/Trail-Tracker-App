@@ -19,6 +19,7 @@ namespace Trail_Tracker_App.Pages.Trails
         }
 
         public Trail Trail { get; set; } = default!;
+        public Mountain Mountain { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,6 +29,7 @@ namespace Trail_Tracker_App.Pages.Trails
             }
 
             var trail = await _context.Trails.FirstOrDefaultAsync(m => m.TrailId == id);
+            var mountain = await _context.Mountains.Where(x => x.MountainId == trail.MountainId).FirstOrDefaultAsync();
             if (trail == null)
             {
                 return NotFound();
@@ -35,6 +37,7 @@ namespace Trail_Tracker_App.Pages.Trails
             else
             {
                 Trail = trail;
+                Mountain = mountain;
             }
             return Page();
         }

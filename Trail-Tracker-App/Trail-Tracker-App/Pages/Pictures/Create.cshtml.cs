@@ -60,13 +60,15 @@ namespace Trail_Tracker_App.Pages.Pictures
                 DateTime dateTime = DateTime.Now;
                 // get trail id by name
                 var trail = _context.Trails.Where(x => x.Name == PictureDTO.TrailName).FirstOrDefault();
+                var user = User.Identity.Name;
+                Console.WriteLine(user);
                 var Picture = new Picture()
                 {
                     TrailId = trail.TrailId,
                     FilePath = $"/Uploads/{PictureDTO.FormFile.FileName}",
-                    UploadedBy = "Not yet Implimented",
-                    UploadDate = dateTime
-
+                    UploadedBy = User.Identity.Name,
+                    UploadDate = dateTime,
+                    
                 };
 
                 _context.Pictures.Add(Picture);
