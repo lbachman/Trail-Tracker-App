@@ -11,14 +11,15 @@ namespace Trail_Tracker_App.Pages.Pictures
 {
     public class DetailsModel : PageModel
     {
-        private readonly Trail_Tracker_App.Entities.MountaintrailsContext _context;
+        private readonly MountaintrailsContext _context;
 
-        public DetailsModel(Trail_Tracker_App.Entities.MountaintrailsContext context)
+        public DetailsModel(MountaintrailsContext context)
         {
             _context = context;
         }
 
         public Picture Picture { get; set; } = default!;
+        public Trail? Trail { get; set; } = default!;   
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -27,7 +28,8 @@ namespace Trail_Tracker_App.Pages.Pictures
                 return NotFound();
             }
 
-            var picture = await _context.Pictures.FirstOrDefaultAsync(m => m.PictureId == id);
+            var picture = await _context.Pictures.FirstOrDefaultAsync(m => m.PictureId == id);           
+            var trail = await _context.Trails.FirstOrDefaultAsync(x => x.TrailId == picture.TrailId);
             if (picture == null)
             {
                 return NotFound();
@@ -35,6 +37,7 @@ namespace Trail_Tracker_App.Pages.Pictures
             else
             {
                 Picture = picture;
+                Trail = trail;
             }
             return Page();
         }

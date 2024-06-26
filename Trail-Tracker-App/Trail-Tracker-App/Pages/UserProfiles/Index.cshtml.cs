@@ -22,8 +22,8 @@ namespace Trail_Tracker_App.Pages.UserProfiles
 
         public async Task OnGetAsync()
         {
-            Userprofile = await _context.Userprofiles
-                .Include(u => u.User).ToListAsync();
+            Userprofile = await _context.Userprofiles.Include(u => u.User).ToListAsync();
+
         }
     }
 }

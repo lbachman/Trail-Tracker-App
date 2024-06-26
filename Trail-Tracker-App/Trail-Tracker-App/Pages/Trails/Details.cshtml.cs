@@ -11,9 +11,9 @@ namespace Trail_Tracker_App.Pages.Trails
 {
     public class DetailsModel : PageModel
     {
-        private readonly Trail_Tracker_App.Entities.MountaintrailsContext _context;
+        private readonly MountaintrailsContext _context;
 
-        public DetailsModel(Trail_Tracker_App.Entities.MountaintrailsContext context)
+        public DetailsModel(MountaintrailsContext context)
         {
             _context = context;
         }
@@ -21,15 +21,20 @@ namespace Trail_Tracker_App.Pages.Trails
         public Trail Trail { get; set; } = default!;
         public Mountain Mountain { get; set; }
 
+        public virtual ICollection<Picture> Pictures { get; set; } = new List<Picture>();
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
+            
 
             var trail = await _context.Trails.FirstOrDefaultAsync(m => m.TrailId == id);
             var mountain = await _context.Mountains.Where(x => x.MountainId == trail.MountainId).FirstOrDefaultAsync();
+            var pictures = await _context.Pictures.Where(x => x.TrailId == id).ToListAsync();
+            trail.Pictures = pictures;
             if (trail == null)
             {
                 return NotFound();
@@ -38,6 +43,7 @@ namespace Trail_Tracker_App.Pages.Trails
             {
                 Trail = trail;
                 Mountain = mountain;
+                Pictures = pictures;
             }
             return Page();
         }

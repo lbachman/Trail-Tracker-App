@@ -47,3 +47,21 @@
     <a asp-page="./Edit" asp-route-id="@Model.Trail.TrailId">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var picture in Model.Trail.Pictures)
+        {
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="@picture.FilePath" class="card-img-top" alt="Picture" style="max-width: 100%; height: auto;">
+                    <div class="card-body">
+                        <p class="card-text">@picture.Trail.Name</p>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
