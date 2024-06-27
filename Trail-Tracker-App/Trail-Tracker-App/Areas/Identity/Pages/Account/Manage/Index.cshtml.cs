@@ -59,6 +59,7 @@ namespace Trail_Tracker_App.Areas.Identity.Pages.Account.Manage
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+            public string UserName { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
@@ -70,7 +71,8 @@ namespace Trail_Tracker_App.Areas.Identity.Pages.Account.Manage
 
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+                UserName = userName
             };
         }
 
@@ -94,12 +96,29 @@ namespace Trail_Tracker_App.Areas.Identity.Pages.Account.Manage
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
+
             if (!ModelState.IsValid)
             {
                 await LoadAsync(user);
                 return Page();
             }
 
+            // change username
+            var userName = await _userManager.GetUserNameAsync(user);
+            if (Input.UserName != userName)
+            {
+                var setUserNameResult = await _userManager.SetUserNameAsync(user, Input.UserName);
+
+                Console.WriteLine($"Username: {user.UserName}");
+                if (!setUserNameResult.Succeeded)
+                {
+                    StatusMessage = "Unexpected error when trying to set user name.";
+                    return RedirectToPage();
+                    
+                }
+            }
+
+            // change phone number
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
             if (Input.PhoneNumber != phoneNumber)
             {
