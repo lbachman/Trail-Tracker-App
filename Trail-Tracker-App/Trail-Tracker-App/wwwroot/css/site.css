@@ -18,6 +18,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-  background-image: url('../Images/DALLEE Background.png')
+    margin-bottom: 60px;
+    background-image: url('../Images/DALLEE Background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }

@@ -11,7 +11,7 @@ using Trail_Tracker_App.Entities;
 namespace Trail_Tracker_App.Migrations
 {
     [DbContext(typeof(MountaintrailsContext))]
-    [Migration("20240618013412_initial")]
+    [Migration("20240627172648_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -276,10 +276,6 @@ namespace Trail_Tracker_App.Migrations
                     b.Property<int?>("Height")
                         .HasColumnType("int");
 
-                    b.Property<string>("Location")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -288,6 +284,10 @@ namespace Trail_Tracker_App.Migrations
                     b.Property<int?>("RangeId")
                         .HasColumnType("int")
                         .HasColumnName("RangeID");
+
+                    b.Property<string>("Zip")
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("MountainId")
                         .HasName("PRIMARY");

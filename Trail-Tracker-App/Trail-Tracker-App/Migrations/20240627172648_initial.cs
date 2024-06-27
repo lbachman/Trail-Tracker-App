@@ -15,7 +15,18 @@ namespace Trail_Tracker_App.Migrations
             migrationBuilder.AlterDatabase()
                 .Annotation("MySQL:Charset", "utf8mb4");
 
-            
+            //migrationBuilder.CreateTable(
+            //    name: "__efmigrationshistory",
+            //    columns: table => new
+            //    {
+            //        MigrationId = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false),
+            //        ProductVersion = table.Column<string>(type: "varchar(32)", maxLength: 32, nullable: false)
+            //    },
+            //    constraints: table =>
+            //    {
+            //        table.PrimaryKey("PRIMARY", x => x.MigrationId);
+            //    })
+            //    .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "aspnetroles",
@@ -214,7 +225,7 @@ namespace Trail_Tracker_App.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     RangeID = table.Column<int>(type: "int", nullable: true),
                     Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    Location = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
+                    Zip = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     Height = table.Column<int>(type: "int", nullable: true),
                     Description = table.Column<string>(type: "text", nullable: true)
                 },

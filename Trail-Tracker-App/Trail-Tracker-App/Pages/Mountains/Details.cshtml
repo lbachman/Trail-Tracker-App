@@ -18,13 +18,13 @@
             @Html.DisplayFor(model => model.Mountain.Name)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Mountain.Location)
+            @Html.DisplayNameFor(model => model.Mountain.Zip)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Mountain.Location)
+            @Html.DisplayFor(model => model.Mountain.Zip)
         </dd>
         <dt class="col-sm-2">
-            Height(ft)
+            @Html.DisplayNameFor(model => model.Mountain.Height)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Mountain.Height)
@@ -36,10 +36,10 @@
             @Html.DisplayFor(model => model.Mountain.Description)
         </dd>
         <dt class="col-sm-2">
-            Mountain Range
+            @Html.DisplayNameFor(model => model.Mountain.Range)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Mountainrange.Name)
+            @Html.DisplayFor(model => model.Mountain.Range.RangeId)
         </dd>
     </dl>
 </div>

@@ -273,10 +273,6 @@ namespace Trail_Tracker_App.Migrations
                     b.Property<int?>("Height")
                         .HasColumnType("int");
 
-                    b.Property<string>("Location")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -285,6 +281,10 @@ namespace Trail_Tracker_App.Migrations
                     b.Property<int?>("RangeId")
                         .HasColumnType("int")
                         .HasColumnName("RangeID");
+
+                    b.Property<string>("Zip")
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("MountainId")
                         .HasName("PRIMARY");

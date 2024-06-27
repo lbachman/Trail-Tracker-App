@@ -9,7 +9,7 @@ public partial class Mountain
 
     public string Name { get; set; } = null!;
 
-    public string? Location { get; set; }
+    public string? Zip { get; set; }
 
     public int? Height { get; set; }
 

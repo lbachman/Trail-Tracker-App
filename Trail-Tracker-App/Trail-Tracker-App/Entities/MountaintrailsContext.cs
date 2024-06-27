@@ -189,7 +189,7 @@ public partial class MountaintrailsContext : DbContext
 
             entity.Property(e => e.MountainId).HasColumnName("MountainID");
             entity.Property(e => e.Description).HasColumnType("text");
-            entity.Property(e => e.Location).HasMaxLength(255);
+            entity.Property(e => e.Zip).HasMaxLength(255);
             entity.Property(e => e.Name).HasMaxLength(255);
             entity.Property(e => e.RangeId).HasColumnName("RangeID");
 

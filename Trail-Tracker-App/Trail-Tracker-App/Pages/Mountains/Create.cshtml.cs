@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Trail_Tracker_App.Entities;
@@ -7,44 +11,31 @@ namespace Trail_Tracker_App.Pages.Mountains
 {
     public class CreateModel : PageModel
     {
-        private readonly MountaintrailsContext _context;
+        private readonly Trail_Tracker_App.Entities.MountaintrailsContext _context;
 
-        public CreateModel(MountaintrailsContext context)
+        public CreateModel(Trail_Tracker_App.Entities.MountaintrailsContext context)
         {
             _context = context;
         }
 
         public IActionResult OnGet()
         {
-        // coresponds to the viewbag thing
-            ViewData["Name"] = new SelectList(_context.Mountainranges, "Name", "Name");
+        ViewData["RangeId"] = new SelectList(_context.Mountainranges, "RangeId", "RangeId");
             return Page();
         }
 
         [BindProperty]
-        public MountainDTO MountainDTO { get; set; } = default!;
+        public Mountain Mountain { get; set; } = default!;
 
+        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
-                Console.WriteLine("error: model state is not valid");
                 return Page();
-                
             }
-            
-            // get mountain range name by id
-            var range = _context.Mountainranges.Where(x => x.Name == MountainDTO.Range).FirstOrDefault();
-            var mountain = new Mountain()
-            {
-                RangeId = range.RangeId,
-                Name = MountainDTO.Name,
-                Location = MountainDTO.Location,
-                Height = MountainDTO.Height,
-                Description = MountainDTO.Description
-            };
 
-            _context.Mountains.Add(mountain);
+            _context.Mountains.Add(Mountain);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
