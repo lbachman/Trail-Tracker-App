@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Trail_Tracker_App.Entities;
@@ -19,7 +15,11 @@ namespace Trail_Tracker_App.Pages.Pictures
         }
 
         public Picture Picture { get; set; } = default!;
-        public Trail? Trail { get; set; } = default!;   
+        public Trail? Trail { get; set; } = default!;
+
+        public Mountain? Mountain { get; set; } = default!;
+
+        public Mountainrange? Range { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,6 +30,8 @@ namespace Trail_Tracker_App.Pages.Pictures
 
             var picture = await _context.Pictures.FirstOrDefaultAsync(m => m.PictureId == id);           
             var trail = await _context.Trails.FirstOrDefaultAsync(x => x.TrailId == picture.TrailId);
+            var mountain = await _context.Mountains.FirstOrDefaultAsync(x => x.MountainId == trail.MountainId);
+            var range = await _context.Mountainranges.FirstOrDefaultAsync(x => x.RangeId == mountain.MountainId);
             if (picture == null)
             {
                 return NotFound();
@@ -38,6 +40,8 @@ namespace Trail_Tracker_App.Pages.Pictures
             {
                 Picture = picture;
                 Trail = trail;
+                Mountain = mountain;
+                Range = range;
             }
             return Page();
         }

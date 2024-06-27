@@ -8,49 +8,26 @@
 <h1>Upload Log</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn btn-primary">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Picture[0].Trail)
-            </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Picture[0].UploadedBy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Picture[0].UploadDate)
-            </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Picture[0].FilePath)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Picture) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Trail.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UploadedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UploadDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FilePath)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.PictureId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.PictureId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.PictureId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="row">
+    @foreach (var item in Model.Picture)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="@item.FilePath" alt="Trail picture" />
+                <div class="card-body">
+                    <h5 class="card-title">@item.Trail.Name</h5>
+                    <p class="card-text">Uploaded by: @item.UploadedBy</p>
+                    <p class="card-text">Upload date: @item.UploadDate</p>
+                    <div class="btn-group" role="group">
+                        <a asp-page="./Edit" asp-route-id="@item.PictureId" class="btn btn-secondary">Edit</a>
+                        <a asp-page="./Details" asp-route-id="@item.PictureId" class="btn btn-secondary">Details</a>
+                        <a asp-page="./Delete" asp-route-id="@item.PictureId" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
