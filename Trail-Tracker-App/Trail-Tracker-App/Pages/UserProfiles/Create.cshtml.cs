@@ -2,26 +2,29 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Trail_Tracker_App.Entities;
+using Microsoft.AspNetCore.Identity;
+using Trail_Tracker_App.Data;
 
 namespace Trail_Tracker_App.Pages.UserProfiles
 {
     public class CreateModel : PageModel
     {
         private readonly MountaintrailsContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public CreateModel(MountaintrailsContext context)
+        public CreateModel(MountaintrailsContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         public IActionResult OnGet()
-        {
-        ViewData["UserName"] = new SelectList(_context.Aspnetusers, "UserName", "UserName");
+        {        
             return Page();
         }
 
         [BindProperty]
-        UserprofileDTO Profile { get; set; } = default!;
+        public UserprofileDTO Profile { get; set; } = default!;
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -29,12 +32,12 @@ namespace Trail_Tracker_App.Pages.UserProfiles
             {
                 return Page();
             }
-            // get id by username
-            var userId = _context.Aspnetusers.Where(x => x.UserName == Profile.UserName).FirstOrDefault();
+            var aspUser = await _userManager.GetUserAsync(User);
+
 
             var user = new Userprofile()
             {
-                UserId = userId.Id,
+                UserId = aspUser.Id,
                 Bio = Profile.Bio,
                 ProfilePicture = Profile.ProfilePicture
             };

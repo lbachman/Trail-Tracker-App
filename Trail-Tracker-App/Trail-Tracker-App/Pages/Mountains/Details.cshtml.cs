@@ -19,6 +19,7 @@ namespace Trail_Tracker_App.Pages.Mountains
         }
 
         public Mountain Mountain { get; set; } = default!;
+        public Mountainrange Range { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,6 +29,7 @@ namespace Trail_Tracker_App.Pages.Mountains
             }
 
             var mountain = await _context.Mountains.FirstOrDefaultAsync(m => m.MountainId == id);
+            var range = await _context.Mountainranges.FirstOrDefaultAsync(x => x.RangeId == mountain.RangeId);
             if (mountain == null)
             {
                 return NotFound();
@@ -35,6 +37,7 @@ namespace Trail_Tracker_App.Pages.Mountains
             else
             {
                 Mountain = mountain;
+                Range = range;
             }
             return Page();
         }
