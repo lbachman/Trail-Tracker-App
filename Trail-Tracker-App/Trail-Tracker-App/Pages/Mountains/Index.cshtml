@@ -1,5 +1,7 @@
 ﻿@page
 @model Trail_Tracker_App.Pages.Mountains.IndexModel
+@using Microsoft.AspNetCore.Html
+@using System.Text.Encodings.Web
 
 @{
     ViewData["Title"] = "Index";
@@ -44,7 +46,7 @@
                 @Html.DisplayFor(modelItem => item.Height)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                @TruncateHtmlContent(Html.DisplayFor(modelItem => item.Description), 75)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Range.RangeId)
@@ -58,3 +60,30 @@
 }
     </tbody>
 </table>
+
+
+@* Helper method to truncate description text *@
+@functions {
+    public string TruncateHtmlContent(IHtmlContent content, int maxLength)
+    {
+        if (content == null)
+        {
+            return string.Empty;
+        }
+
+        // Convert IHtmlContent to string
+        using (var writer = new StringWriter())
+        {
+            content.WriteTo(writer, HtmlEncoder.Default);
+            var text = writer.ToString();
+
+            // Truncate the text if it exceeds maxLength
+            if (text.Length > maxLength)
+            {
+                return text.Substring(0, maxLength) + "...";
+            }
+
+            return text;
+        }
+    }
+}

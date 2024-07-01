@@ -26,6 +26,8 @@ namespace Trail_Tracker_App.Pages.Mountains
         public ICollection<Picture> PictureList { get; set; }
         
         public WeatherData.Rootobject WeatherData { get; set; } = default!;
+        
+        public Moon Moon { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -67,8 +69,58 @@ namespace Trail_Tracker_App.Pages.Mountains
                 }
 
                 string jsonResponse = await response.Content.ReadAsStringAsync();
+                WeatherData = JsonConvert.DeserializeObject<WeatherData.Rootobject>(jsonResponse);
 
-                 WeatherData = JsonConvert.DeserializeObject<WeatherData.Rootobject>(jsonResponse);
+
+                // moon logic section
+                string moonHeading = "";
+                string filePath = "";
+
+                if (WeatherData.location.currentConditions.moonphase == 0 )
+                {
+                    moonHeading = "Full Moon";
+                    filePath = "/Images/Moon/full_moon.jpeg";
+                }
+
+                else if (WeatherData.location.currentConditions.moonphase >= 0 && WeatherData.location.currentConditions.moonphase < 0.25)
+                {
+                    moonHeading = "Waxing Crescent";
+                    filePath = "/Images/Moon/WaxingCrescent.png";
+                }
+
+                else if (WeatherData.location.currentConditions.moonphase == 0.25)
+                {
+                    moonHeading = "First Quarter";
+                }
+                else if (WeatherData.location.currentConditions.moonphase >= 0.25 && WeatherData.location.currentConditions.moonphase <0.5)
+                {
+                    moonHeading = "Waxing Gibbous";
+                }
+                else if (WeatherData.location.currentConditions.moonphase == 0.5 )
+                {
+                    moonHeading = "Full Moon";
+                }
+                else if (WeatherData.location.currentConditions.moonphase >= 0.5 && WeatherData.location.currentConditions.moonphase < 0.75)
+                {
+                    moonHeading = "Waning Gibbous";
+                }
+                else if (WeatherData.location.currentConditions.moonphase == 0.75)
+                {
+                    moonHeading = "Last Quarter";
+                }
+                else if (WeatherData.location.currentConditions.moonphase >= 0.75 && WeatherData.location.currentConditions.moonphase < 1)
+                {
+                    moonHeading = "Waning Crescent";
+                    filePath = "/Images/Moon/WaningCrescent.jpg";
+
+                }
+                
+                Moon moon = new Moon();
+                moon.Heading = moonHeading;
+                moon.FilePath = filePath;
+                Moon = moon;
+
+
 
                 if (WeatherData == null)
                 {

@@ -44,7 +44,7 @@
         </dd>
     </dl>
 </div><br>
-
+<hr>
 
 
 <div class="container">
@@ -64,10 +64,55 @@
     </div>
 </div>
 
+<hr>
 
-
-@*  weather api table *@
+@* current weather *@
 <br>
+<br>
+<h4>Current Weather</h4>
+<hr />
+<table class="table table-bordered table-striped table-semi-solid">
+    <thead>
+        <tr>
+            
+            <th>Temperature</th>           
+            <th>Precipitation</th>
+            <th>Cloud Cover</th>
+            <th>WindSpeed</th>
+            <th>Wind Direction</th>
+            <th>Wind Gust</th>
+            <th>Visibility</th>
+            <th>Dew Point</th>
+            <th>Sunrise Time</th>
+            <th>Sunset Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr>                
+                <td>@Model.WeatherData.location.currentConditions.temp</td>
+                <td>@Model.WeatherData.location.currentConditions.precip</td>
+                <td>@Model.WeatherData.location.currentConditions.cloudcover%</td>
+                <td>@Model.WeatherData.location.currentConditions.wspd mph</td>
+                <td>@Model.WeatherData.location.currentConditions.wdir</td>
+                <td>@Model.WeatherData.location.currentConditions.wgust</td>
+                <td>@Model.WeatherData.location.currentConditions.visibility</td>
+                <td>@Model.WeatherData.location.currentConditions.dew</td>
+                <td>@Model.WeatherData.location.currentConditions.sunrise.ToShortTimeString()</td>
+                <td>@Model.WeatherData.location.currentConditions.sunset.ToShortTimeString()</td>
+            </tr>
+        
+    </tbody>
+</table>
+
+@* Moon Section *@
+<hr>
+<h4>Moon</h4>
+<h5>@Model.Moon.Heading</h5>
+<img class="w-50" src="@Model.Moon.FilePath"></img>
+
+@*  7 day forecast *@
+<hr>
 <br>
 <h4>7-Day Forecast</h4>
 <hr />
