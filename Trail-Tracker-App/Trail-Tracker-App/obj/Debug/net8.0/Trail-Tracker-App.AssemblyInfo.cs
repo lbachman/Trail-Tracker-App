@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Trail-Tracker-App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab263e534cd42dbccc1b400a7b063526dc2039e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d52674af990884586d94cf1236b12d331d6285f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Trail-Tracker-App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Trail-Tracker-App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
