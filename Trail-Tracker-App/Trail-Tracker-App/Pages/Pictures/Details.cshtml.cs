@@ -31,7 +31,8 @@ namespace Trail_Tracker_App.Pages.Pictures
             var picture = await _context.Pictures.FirstOrDefaultAsync(m => m.PictureId == id);           
             var trail = await _context.Trails.FirstOrDefaultAsync(x => x.TrailId == picture.TrailId);
             var mountain = await _context.Mountains.FirstOrDefaultAsync(x => x.MountainId == trail.MountainId);
-            var range = await _context.Mountainranges.FirstOrDefaultAsync(x => x.RangeId == mountain.MountainId);
+            var range = await _context.Mountainranges.FirstOrDefaultAsync(x => x.RangeId == mountain.RangeId);
+
             if (picture == null)
             {
                 return NotFound();

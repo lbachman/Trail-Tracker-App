@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Upload Log</h1>
+<h1>Uploads</h1>
 
 <p>
     <a asp-page="Create" class="btn btn-primary">Create New</a>
@@ -16,14 +16,17 @@
     {
         <div class="col-md-4">
             <div class="card mb-4">
-                <img class="card-img-top" src="@item.FilePath" alt="Trail picture" />
+                <a asp-page="./Details" asp-route-id="@item.PictureId" class="card-link">
+                    <img class="card-img-top" src="@item.FilePath" alt="Trail picture" />
+                    <div class="card-body">
+                        <h5 style="padding: 10px" class="card-title">@item.Trail.Name</h5>
+                        <p style="padding: 10px" class="card-text">Uploaded by: @item.UploadedBy</p>
+                        <p style="padding: 10px" class="card-text">Upload date: @item.UploadDate</p>
+                    </div>
+                </a>
                 <div class="card-body">
-                    <h5 class="card-title">@item.Trail.Name</h5>
-                    <p class="card-text">Uploaded by: @item.UploadedBy</p>
-                    <p class="card-text">Upload date: @item.UploadDate</p>
                     <div class="btn-group" role="group">
                         <a asp-page="./Edit" asp-route-id="@item.PictureId" class="btn btn-secondary">Edit</a>
-                        <a asp-page="./Details" asp-route-id="@item.PictureId" class="btn btn-secondary">Details</a>
                         <a asp-page="./Delete" asp-route-id="@item.PictureId" class="btn btn-danger">Delete</a>
                     </div>
                 </div>

@@ -22,13 +22,14 @@
                 @Html.DisplayNameFor(model => model.Mountain[0].Zip)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Mountain[0].Height)
+                Height(ft)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Mountain[0].Range)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Mountain[0].Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Mountain[0].Range)
             </th>
             <th></th>
         </tr>
@@ -45,11 +46,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Height)
             </td>
+            
             <td>
-                @TruncateHtmlContent(Html.DisplayFor(modelItem => item.Description), 75)
+                @Html.DisplayFor(modelItem => item.Range.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Range.RangeId)
+                @TruncateHtmlContent(Html.DisplayFor(modelItem => item.Description), 50)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.MountainId" class="btn btn-secondary">Edit</a> |

@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-secondary border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Trail Tracker App</a>
+                <a class="navbar-brand text-light" asp-area="" asp-page="/Index">Trail Tracker App</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,39 +20,34 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/MountainRanges/Index">Mountain Ranges</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/MountainRanges/Index">Mountain Ranges</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Mountains/Index">Mountains</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Mountains/Index">Mountains</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Trails/Index">Trails</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Trails/Index">Trails</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/UserProfiles/Index">User Profiles</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/UserProfiles/Index">User Profiles</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Pictures/Index">Upload Log</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Pictures/Index">Uploads</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Gallery">Gallery</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
-                    <partial name="_LoginPartial" />
+                    <partial class="text-light" name="_LoginPartial" />
                 </div>
             </div>
         </nav>

@@ -23,7 +23,7 @@ namespace Trail_Tracker_App.Pages.Mountains
         public Mountain Mountain { get; set; } = default!;
         public Mountainrange Range { get; set; } = default!;
 
-        public ICollection<Picture> PictureList { get; set; }
+        public List<Picture> PictureList { get; set; } = default!;
         
         public WeatherData.Rootobject WeatherData { get; set; } = default!;
         

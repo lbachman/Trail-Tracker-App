@@ -33,3 +33,17 @@ containerPic {
 .table-semi-solid {
     background-color: rgba(255, 255, 255, 0.8); /* Adjust the last value (0.8) for opacity */
 }
+
+
+.card-link {
+    color: inherit; /* Remove default anchor styling */
+    text-decoration: none; /* Remove underline */
+}
+
+    .card-link .card-body {
+        padding: 0; /* Adjust padding if necessary */
+    }
+
+    .card-link .btn-group {
+        margin-top: 10px; /* Adjust spacing if necessary */
+    }
