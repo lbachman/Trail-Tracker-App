@@ -2,10 +2,10 @@
 {
     public class MountainDTO
     {
-        public string Range { get; set; }
+        public string RangeName { get; set; }
         public string Name { get; set; } = null!;
 
-        public string? Location { get; set; }
+        public string? Zip { get; set; }
 
         public int? Height { get; set; }
 

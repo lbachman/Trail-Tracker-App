@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,15 +8,18 @@ namespace Trail_Tracker_App.Pages.Mountains
 {
     public class EditModel : PageModel
     {
-        private readonly Trail_Tracker_App.Entities.MountaintrailsContext _context;
+        private readonly MountaintrailsContext _context;
 
-        public EditModel(Trail_Tracker_App.Entities.MountaintrailsContext context)
+        public EditModel(MountaintrailsContext context)
         {
             _context = context;
         }
 
-        [BindProperty]
+        
         public Mountain Mountain { get; set; } = default!;
+
+        [BindProperty]
+        public MountainDTO MtDTO { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,18 +28,27 @@ namespace Trail_Tracker_App.Pages.Mountains
                 return NotFound();
             }
 
-            var mountain =  await _context.Mountains.FirstOrDefaultAsync(m => m.MountainId == id);
-            if (mountain == null)
+            Mountain = await _context.Mountains.FindAsync(id);
+            if (Mountain == null)
             {
                 return NotFound();
             }
-            Mountain = mountain;
-           ViewData["RangeId"] = new SelectList(_context.Mountainranges, "RangeId", "RangeId");
+
+            var range = _context.Mountainranges.FirstOrDefault(x => x.RangeId == Mountain.RangeId);
+
+            MtDTO = new MountainDTO()
+            {
+                RangeName = range.Name,
+                Name = Mountain.Name,
+                Zip = Mountain.Zip,
+                Height = Mountain.Height,
+                Description = Mountain.Description
+            };
+
+            ViewData["Name"] = new SelectList(_context.Mountainranges, "Name", "Name");
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -48,7 +56,20 @@ namespace Trail_Tracker_App.Pages.Mountains
                 return Page();
             }
 
-            _context.Attach(Mountain).State = EntityState.Modified;
+            var range = await _context.Mountainranges.FirstOrDefaultAsync(x => x.Name == MtDTO.RangeName);
+            var mountainToUpdate = await _context.Mountains.FirstOrDefaultAsync(x => x.Name == MtDTO.Name);
+
+            if (mountainToUpdate == null)
+            {
+                return NotFound();
+            }
+
+            mountainToUpdate.RangeId = range.RangeId;
+            mountainToUpdate.Name = MtDTO.Name;
+            mountainToUpdate.Zip = MtDTO.Zip;
+            mountainToUpdate.Height = MtDTO.Height;
+            mountainToUpdate.Description = MtDTO.Description;
+            _context.Attach(mountainToUpdate).State = EntityState.Modified;
 
             try
             {
