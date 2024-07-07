@@ -14,29 +14,27 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Userprofile[0].Bio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Userprofile[0].ProfilePicture)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Userprofile[0].User)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Userprofile[0].Bio)
+            </th>
+            
+            
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.Userprofile) {
         <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.UserName)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Bio)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProfilePicture)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.UserName)
-            </td>
+            
+            
             <td>
                     <a class="btn btn-secondary" asp-page="./Edit" asp-route-id="@item.UserProfileId">Edit</a> |
                     <a class="btn btn-secondary" asp-page="./Details" asp-route-id="@item.UserProfileId">View</a> |

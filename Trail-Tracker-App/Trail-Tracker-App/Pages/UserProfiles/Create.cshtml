@@ -25,15 +25,13 @@
                 <input asp-for="Profile.ProfilePicture" class="form-control" />
                 <span asp-validation-for="Profile.ProfilePicture" class="text-danger"></span>
             </div>
+            <br>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" /> |
+                <a <a class="btn btn-outline-secondary" asp-page="Index">Back to List</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

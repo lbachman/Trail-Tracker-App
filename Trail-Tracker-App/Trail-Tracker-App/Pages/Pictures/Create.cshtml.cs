@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Security.Claims;
 using Trail_Tracker_App.Entities;
 
 namespace Trail_Tracker_App.Pages.Pictures
@@ -58,15 +59,18 @@ namespace Trail_Tracker_App.Pages.Pictures
                 }
                 // grab datetime
                 DateTime dateTime = DateTime.Now;
+
                 // get trail id by name
                 var trail = _context.Trails.Where(x => x.Name == PictureDTO.TrailName).FirstOrDefault();
-                var user = User.Identity.Name;
-                Console.WriteLine(user);
+
+                // get user id of currently logged user
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
                 var Picture = new Picture()
                 {
                     TrailId = trail.TrailId,
                     FilePath = $"/Uploads/{PictureDTO.FormFile.FileName}",
-                    UploadedBy = User.Identity.Name,
+                    UploadedBy = userId,
                     UploadDate = dateTime,
                     
                 };
