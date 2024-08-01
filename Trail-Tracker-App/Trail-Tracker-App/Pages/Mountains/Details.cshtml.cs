@@ -25,7 +25,9 @@ namespace Trail_Tracker_App.Pages.Mountains
 
         public List<Picture> PictureList { get; set; } = default!;
         
-        public WeatherData.Rootobject WeatherData { get; set; } = default!;
+        public WeatherData.Rootobject? WeatherData { get; set; } = default!;
+
+        public HourlyWeatherData.Rootobject HourlyData { get; set; } = default!;
         
         public Moon Moon { get; set; } = default!;
 
@@ -37,10 +39,7 @@ namespace Trail_Tracker_App.Pages.Mountains
             }
 
             var mountain = await _context.Mountains.FirstOrDefaultAsync(m => m.MountainId == id);
-
             var range = await _context.Mountainranges.FirstOrDefaultAsync(x => x.RangeId == mountain.RangeId);
-
-            // list of pictures where trail mtn id is mountain id
             var pictures = _context.Pictures.Where(x => x.Trail.MountainId == mountain.MountainId).ToList();
 
             if (mountain == null)
@@ -56,68 +55,83 @@ namespace Trail_Tracker_App.Pages.Mountains
 
             try
             {
-                var client = _httpClientFactory.CreateClient();
-                string zipCode = Mountain.Zip; // Replace with Mountain.Zip or appropriate zip code
+
+                string zipCode = Mountain.Zip;
+
                 string apiUrl = $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?aggregateHours=24&combinationMethod=aggregate&includeAstronomy=true&contentType=json&unitGroup=us&locationMode=single&key=FZ8HVEBVWV3LA6ZK3HRVKNR5P&dataElements=default&locations={zipCode}";
 
-                var response = await client.GetAsync(apiUrl);
+                string hourlyWeatherUrl = $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{zipCode}/2024-7-10?unitGroup=us&key=FZ8HVEBVWV3LA6ZK3HRVKNR5P&include=hours%2Calerts%2Ccurrent";
 
-                if (!response.IsSuccessStatusCode)
+                var client = _httpClientFactory.CreateClient();
+ 
+
+                var response = await client.GetAsync(apiUrl);
+                var responseHourly = await client.GetAsync(hourlyWeatherUrl);
+
+                if (!response.IsSuccessStatusCode || !responseHourly.IsSuccessStatusCode)
                 {
                     Console.WriteLine($"Failed to retrieve weather data. Status code: {response.StatusCode}");
-                    return Page(); 
+                    return Page();
                 }
 
                 string jsonResponse = await response.Content.ReadAsStringAsync();
-                WeatherData = JsonConvert.DeserializeObject<WeatherData.Rootobject>(jsonResponse);
+                string jsonResponseHourly = await responseHourly.Content.ReadAsStringAsync();
+                Console.WriteLine(jsonResponseHourly);
 
+                WeatherData = JsonConvert.DeserializeObject<WeatherData.Rootobject>(jsonResponse);
+                HourlyData = JsonConvert.DeserializeObject<HourlyWeatherData.Rootobject>(jsonResponseHourly);
+
+                
 
                 // moon logic section
                 string moonHeading = "";
                 string filePath = "";
-
-                if (WeatherData.location.currentConditions.moonphase == 0 )
+                Console.WriteLine(HourlyData.days[0].conditions);
+                if (HourlyData.days[0].moonphase == 0)
                 {
-                    moonHeading = "Full Moon";
+                    moonHeading = "New Moon";
                     filePath = "/Images/Moon/full_moon.jpeg";
                 }
 
-                else if (WeatherData.location.currentConditions.moonphase >= 0 && WeatherData.location.currentConditions.moonphase < 0.25)
+                else if (HourlyData.days[0].moonphase >= 0 && HourlyData.days[0].moonphase < 0.25)
                 {
                     moonHeading = "Waxing Crescent";
                     filePath = "/Images/Moon/WaxingCrescent.png";
                 }
 
-                else if (WeatherData.location.currentConditions.moonphase == 0.25)
+                else if (HourlyData.days[0].moonphase == 0.25)
                 {
                     moonHeading = "First Quarter";
                 }
-                else if (WeatherData.location.currentConditions.moonphase >= 0.25 && WeatherData.location.currentConditions.moonphase <0.5)
+                else if (HourlyData.days[0].moonphase >= 0.25 && HourlyData.days[0].moonphase < 0.5)
                 {
                     moonHeading = "Waxing Gibbous";
                 }
-                else if (WeatherData.location.currentConditions.moonphase == 0.5 )
+                else if (HourlyData.days[0].moonphase == 0.5)
                 {
                     moonHeading = "Full Moon";
                 }
-                else if (WeatherData.location.currentConditions.moonphase >= 0.5 && WeatherData.location.currentConditions.moonphase < 0.75)
+                else if (HourlyData.days[0].moonphase >= 0.5 && HourlyData.days[0].moonphase < 0.75)
                 {
                     moonHeading = "Waning Gibbous";
                 }
-                else if (WeatherData.location.currentConditions.moonphase == 0.75)
+                else if (HourlyData.days[0].moonphase == 0.75)
                 {
                     moonHeading = "Last Quarter";
                 }
-                else if (WeatherData.location.currentConditions.moonphase >= 0.75 && WeatherData.location.currentConditions.moonphase < 1)
+                else if (HourlyData.days[0].moonphase >= 0.75 && HourlyData.days[0].moonphase < 1)
                 {
                     moonHeading = "Waning Crescent";
                     filePath = "/Images/Moon/WaningCrescent.jpg";
 
                 }
-                
-                Moon moon = new Moon();
-                moon.Heading = moonHeading;
-                moon.FilePath = filePath;
+
+                Moon moon = new Moon()
+                {
+                    Heading = moonHeading,
+                    FilePath = filePath,
+                };
+
                 Moon = moon;
 
 
@@ -135,9 +149,6 @@ namespace Trail_Tracker_App.Pages.Mountains
                 Console.WriteLine($"Error fetching weather data: {ex.Message}");
                 return Page();
             }
-
-
-
         }
     }
 }

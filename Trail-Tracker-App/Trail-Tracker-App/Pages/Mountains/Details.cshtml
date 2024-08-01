@@ -48,6 +48,7 @@
 <hr>
 
 
+<h4>Uploads</h4>
 <div class="row">
     @foreach (var item in Model.PictureList)
     {
@@ -77,47 +78,67 @@
 @* current weather *@
 <br>
 <br>
-<h4>Current Weather</h4>
-<hr />
-<table class="table table-bordered table-striped table-semi-solid">
-    <thead>
-        <tr>
-            
-            <th>Temperature</th>           
-            <th>Precipitation</th>
-            <th>Cloud Cover</th>
-            <th>WindSpeed</th>
-            <th>Wind Direction</th>
-            <th>Wind Gust</th>
-            <th>Visibility</th>
-            <th>Dew Point</th>
-            <th>Sunrise Time</th>
-            <th>Sunset Time</th>
-        </tr>
-    </thead>
-    <tbody>
-        
-            <tr>                
-                <td>@Model.WeatherData.location.currentConditions.temp</td>
-                <td>@Model.WeatherData.location.currentConditions.precip</td>
-                <td>@Model.WeatherData.location.currentConditions.cloudcover%</td>
-                <td>@Model.WeatherData.location.currentConditions.wspd mph</td>
-                <td>@Model.WeatherData.location.currentConditions.wdir</td>
-                <td>@Model.WeatherData.location.currentConditions.wgust</td>
-                <td>@Model.WeatherData.location.currentConditions.visibility</td>
-                <td>@Model.WeatherData.location.currentConditions.dew</td>
-                <td>@Model.WeatherData.location.currentConditions.sunrise.ToShortTimeString()</td>
-                <td>@Model.WeatherData.location.currentConditions.sunset.ToShortTimeString()</td>
-            </tr>
-        
-    </tbody>
-</table>
-
-@* Moon Section *@
+<div class="container d-flex justify-content-center">
+    <div class="card" style="width: 100%; max-width: 1200px;">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Current Weather</h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><strong>Description:</strong> @Model.HourlyData.days[0].description</p>
+            <hr>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Conditions</th>
+                            <th>Cloud Cover</th>
+                            <th>Temperature</th>
+                            <th>Feels Like</th>
+                            <th>Wind Speed</th>
+                            <th>Wind Gust</th>
+                            <th>Wind Direction</th>
+                            <th>Humidity</th>
+                            <th>Visibility</th>
+                            <th>Sunrise Time</th>
+                            <th>Sunset Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Model.HourlyData.days[0].conditions</td>
+                            <td>@Model.HourlyData.days[0].cloudcover %</td>
+                            <td>@Model.HourlyData.days[0].temp °F</td>
+                            <td>@Model.HourlyData.days[0].feelslike °F</td>
+                            <td>@($"{Model.HourlyData.days[0].windspeed} mph")</td>
+                            <td>@($"{Model.HourlyData.days[0].windgust} mph")</td>
+                            <td>@Model.HourlyData.days[0].winddir</td>
+                            <td>@Model.HourlyData.days[0].humidity %</td>
+                            <td>@Model.HourlyData.days[0].visibility miles</td>
+                            <td>@Model.HourlyData.days[0].sunrise</td>
+                            <td>@Model.HourlyData.days[0].sunset</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
 <hr>
-<h4>Moon</h4>
-<h5>@Model.Moon.Heading</h5>
-<img class="w-50" src="@Model.Moon.FilePath"></img>
+<br>
+<div class="container d-flex justify-content-center">
+<div class="card mb-4" style="width: 100%; max-width: 800px;">
+    <div class="card-header bg-secondary text-white">
+        <h4 class="mb-0">Moon</h4>
+    </div>
+    <div class="card-body text-center">
+        <h5>@Model.Moon.Heading</h5>
+        <img class="w-50" src="@Model.Moon.FilePath" alt="Moon Image"></img>
+    </div>
+</div>
+</div>
+
+
 
 @*  7 day forecast *@
 <hr>
@@ -128,7 +149,9 @@
     <thead>
         <tr>
             <th>Date</th>
-            <th>Temperature</th>
+            <th>Conditions</th>
+            <th>Temp High</th>
+            <th>Temp Low</th>
             <th>Sunrise Time</th>
             <th>Sunset Time</th>
         </tr>
