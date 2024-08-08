@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7oWaqAPW3aDW8ARpIlfd4pGpo2M73DH91ybKvTeh8vA=",
+  "Hash": "LUpItf5GuicR3aiRnN2D6W0vMA2527FuhJXq5OMVXpU=",
   "Source": "Trail-Tracker-App",
   "BasePath": "_content/Trail-Tracker-App",
   "Mode": "Default",
@@ -1309,12 +1309,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\full_moon.png"
     },
     {
-      "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\full_moon.jpeg",
+      "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\FirstQuarter.jpg",
       "SourceId": "Trail-Tracker-App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\",
       "BasePath": "_content/Trail-Tracker-App",
-      "RelativePath": "Images/Moon/full_moon.jpeg",
+      "RelativePath": "Images/Moon/FirstQuarter.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1325,7 +1325,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Moon\\full_moon.jpeg"
+      "OriginalItemSpec": "wwwroot\\Images\\Moon\\FirstQuarter.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\FullMoon.jpeg",
+      "SourceId": "Trail-Tracker-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\",
+      "BasePath": "_content/Trail-Tracker-App",
+      "RelativePath": "Images/Moon/FullMoon.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Moon\\FullMoon.jpeg"
     },
     {
       "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\moon-phases-explained.png",
@@ -1347,12 +1366,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\Moon\\moon-phases-explained.png"
     },
     {
-      "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\thirdQuarter.png",
+      "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\NewMoon.jpg",
       "SourceId": "Trail-Tracker-App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\",
       "BasePath": "_content/Trail-Tracker-App",
-      "RelativePath": "Images/Moon/thirdQuarter.png",
+      "RelativePath": "Images/Moon/NewMoon.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1363,7 +1382,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Moon\\thirdQuarter.png"
+      "OriginalItemSpec": "wwwroot\\Images\\Moon\\NewMoon.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\ThirdQuarter.png",
+      "SourceId": "Trail-Tracker-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\",
+      "BasePath": "_content/Trail-Tracker-App",
+      "RelativePath": "Images/Moon/ThirdQuarter.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Moon\\ThirdQuarter.png"
     },
     {
       "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\WaningCrescent.jpg",
@@ -2523,6 +2561,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\.gitkeep"
+    },
+    {
+      "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\imageedit_1_3413977762.jpg",
+      "SourceId": "Trail-Tracker-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\",
+      "BasePath": "_content/Trail-Tracker-App",
+      "RelativePath": "Uploads/imageedit_1_3413977762.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\imageedit_1_3413977762.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\imageedit_11_5952536030.jpg",
+      "SourceId": "Trail-Tracker-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\",
+      "BasePath": "_content/Trail-Tracker-App",
+      "RelativePath": "Uploads/imageedit_11_5952536030.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\imageedit_11_5952536030.jpg"
     },
     {
       "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\IMG_1482.JPG",

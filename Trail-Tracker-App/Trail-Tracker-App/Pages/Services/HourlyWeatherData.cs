@@ -96,8 +96,8 @@
             public float dew { get; set; }
             public float precip { get; set; }
             public float precipprob { get; set; }
-            public float snow { get; set; }
-            public float snowdepth { get; set; }
+            public float? snow { get; set; }
+            public float? snowdepth { get; set; }
             public object preciptype { get; set; }
             public float windgust { get; set; }
             public float windspeed { get; set; }
@@ -135,8 +135,8 @@
             public float precipprob { get; set; }
             public float precipcover { get; set; }
             public object preciptype { get; set; }
-            public float snow { get; set; }
-            public float snowdepth { get; set; }
+            public float? snow { get; set; }
+            public float? snowdepth { get; set; }
             public float windgust { get; set; }
             public float windspeed { get; set; }
             public float winddir { get; set; }
@@ -170,8 +170,8 @@
             public float dew { get; set; }
             public float precip { get; set; }
             public float precipprob { get; set; }
-            public float snow { get; set; }
-            public float snowdepth { get; set; }
+            public float? snow { get; set; }
+            public float? snowdepth { get; set; }
             public object preciptype { get; set; }
             public float windgust { get; set; }
             public float windspeed { get; set; }

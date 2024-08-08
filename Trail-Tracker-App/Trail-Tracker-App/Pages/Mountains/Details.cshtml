@@ -9,7 +9,7 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Mountain</h4>
+    <h4>@Model.Mountain.Name</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -101,6 +101,7 @@
                             <th>Visibility</th>
                             <th>Sunrise Time</th>
                             <th>Sunset Time</th>
+                            <th>Moonphase (remove)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -116,6 +117,7 @@
                             <td>@Model.HourlyData.days[0].visibility miles</td>
                             <td>@Model.HourlyData.days[0].sunrise</td>
                             <td>@Model.HourlyData.days[0].sunset</td>
+                            <td>@Model.HourlyData.days[0].moonphase</td>
                         </tr>
                     </tbody>
                 </table>
@@ -132,7 +134,10 @@
         <h4 class="mb-0">Moon</h4>
     </div>
     <div class="card-body text-center">
-        <h5>@Model.Moon.Heading</h5>
+        <h3>@Model.Moon.Heading</h3>
+        <h4>Moonrise: @Model.Moon.Moonrise</h4>
+        <h4>Moonset: @Model.Moon.Moonset</h4>
+        <h4>@Model.Moon.Percent %</h4>
         <img class="w-50" src="@Model.Moon.FilePath" alt="Moon Image"></img>
     </div>
 </div>
@@ -149,26 +154,26 @@
     <thead>
         <tr>
             <th>Date</th>
-            <th>Conditions</th>
-            <th>Temp High</th>
-            <th>Temp Low</th>
-            <th>Sunrise Time</th>
-            <th>Sunset Time</th>
+            <th>Description</th>
+            <th>High</th>
+            <th>Low</th>
+            
         </tr>
     </thead>
     <tbody>
         @for (int i = 0; i < 7; i++)
         {
             <tr>
-                <td>@Model.WeatherData.location.values[i].datetimeStr.ToShortDateString()</td>
-                <td>@Model.WeatherData.location.values[i].temp</td>              
-                <td>@Model.WeatherData.location.values[i].sunrise.ToShortTimeString()</td>
-                <td>@Model.WeatherData.location.values[i].sunset.ToShortTimeString()</td>
+                
+                <td>@Model.WeatherData.days[i].datetime.ToString()</td>
+                <td>@Model.WeatherData.days[i].description</td>
+                <td>@Model.WeatherData.days[i].tempmax</td>
+                <td>@Model.WeatherData.days[i].tempmin</td>
             </tr>
         }
     </tbody>
 </table>
-
+<br>
 <div>
     <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@Model.Mountain.MountainId">Edit</a> |
     <a class="btn btn-primary" asp-page="./Index">Back to List</a>

@@ -9,6 +9,22 @@
       "PackagePath": "staticwebassets\\Images\\DALLEE Background.png"
     },
     {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\FirstQuarter.jpg",
+      "PackagePath": "staticwebassets\\Images\\Moon\\FirstQuarter.jpg"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\FullMoon.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Moon\\FullMoon.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\NewMoon.jpg",
+      "PackagePath": "staticwebassets\\Images\\Moon\\NewMoon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\ThirdQuarter.png",
+      "PackagePath": "staticwebassets\\Images\\Moon\\ThirdQuarter.png"
+    },
+    {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\WaningCrescent.jpg",
       "PackagePath": "staticwebassets\\Images\\Moon\\WaningCrescent.jpg"
     },
@@ -17,16 +33,8 @@
       "PackagePath": "staticwebassets\\Images\\Moon\\WaxingCrescent.png"
     },
     {
-      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\full_moon.jpeg",
-      "PackagePath": "staticwebassets\\Images\\Moon\\full_moon.jpeg"
-    },
-    {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\moon-phases-explained.png",
       "PackagePath": "staticwebassets\\Images\\Moon\\moon-phases-explained.png"
-    },
-    {
-      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\thirdQuarter.png",
-      "PackagePath": "staticwebassets\\Images\\Moon\\thirdQuarter.png"
     },
     {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\full_moon.png",
@@ -63,6 +71,14 @@
     {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\IMG_3403.JPEG",
       "PackagePath": "staticwebassets\\Uploads\\IMG_3403.JPEG"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\imageedit_11_5952536030.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\imageedit_11_5952536030.jpg"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\imageedit_1_3413977762.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\imageedit_1_3413977762.jpg"
     },
     {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\css\\site.css",
