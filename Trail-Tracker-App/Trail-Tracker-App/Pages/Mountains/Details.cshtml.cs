@@ -57,72 +57,78 @@ namespace Trail_Tracker_App.Pages.Mountains
             {
                 string apiKey = "FZ8HVEBVWV3LA6ZK3HRVKNR5P";
                 string zipCode = Mountain.Zip;
-
-                DateTime currentDate = DateTime.Now;
-                string formattedDate = currentDate.ToString("yyyy-M-d");
+                string formattedDate = DateTime.Now.ToString("yyyy-M-d");
                 
-                string sevenDay_MoonEndpoint = $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{zipCode}/?unitGroup=us&key={apiKey}&include=days&elements=moonrise,moonset,tempmin,tempmax,conditions,description,datetime";              
-
-                string hourlyWeatherUrl = $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{zipCode}/{formattedDate}?unitGroup=us&key={apiKey}&include=hours%2Calerts%2Ccurrent";
-
                 var client = _httpClientFactory.CreateClient();
- 
+
+                string sevenDay_MoonEndpoint = $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{zipCode}/?unitGroup=us&key={apiKey}&include=days&elements=moonrise,moonset,tempmin,tempmax,conditions,description,datetime";
+                // request for 7 day forecast data
                 var moonresponse = await client.GetAsync(sevenDay_MoonEndpoint);
-
-                var responseHourly = await client.GetAsync(hourlyWeatherUrl);
-
-                if (!moonresponse.IsSuccessStatusCode || !responseHourly.IsSuccessStatusCode)
+                if (!moonresponse.IsSuccessStatusCode)
                 {
                     Console.WriteLine($"Failed to retrieve weather data. {moonresponse.StatusCode}");
                     return Page();
                 }
-
                 string moonjsonResponse = await moonresponse.Content.ReadAsStringAsync();
-                string jsonResponseHourly = await responseHourly.Content.ReadAsStringAsync();
-
                 WeatherData = JsonConvert.DeserializeObject<_7Day_MoonData.Rootobject>(moonjsonResponse);
+
+
+                string currentWeather = $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{zipCode}/{formattedDate}?unitGroup=us&key={apiKey}&include=hours%2Calerts%2Ccurrent";
+                // request for current data and moon data
+                var responseHourly = await client.GetAsync(currentWeather);
+                if (!responseHourly.IsSuccessStatusCode)
+                {
+                    Console.WriteLine($"Failed to retrieve weather data. {responseHourly.StatusCode}");
+                    return Page();
+                }             
+                string jsonResponseHourly = await responseHourly.Content.ReadAsStringAsync();
                 HourlyData = JsonConvert.DeserializeObject<HourlyWeatherData.Rootobject>(jsonResponseHourly);
 
-                
+                // convert sunrise and sunset to 12 hour format
+                HourlyData.days[0].sunrise = ConvertTime(HourlyData.days[0].sunrise);
+                HourlyData.days[0].sunset = ConvertTime(HourlyData.days[0].sunset);
+
 
                 // moon logic section
                 string moonHeading = "";
                 string filePath = "";
-                if (HourlyData.days[0].moonphase >= 0.97 || HourlyData.days[0].moonphase <= 0.02)
+                double moonPhase = HourlyData.days[0].moonphase;
+
+                if (moonPhase >= 0.97 || moonPhase <= 0.02)
                 {
                     moonHeading = "New Moon";
                     filePath = "/Images/Moon/NewMoon.jpg";
                 }
 
-                else if (HourlyData.days[0].moonphase >= 0 && HourlyData.days[0].moonphase < 0.25)
+                else if (moonPhase >= 0 && moonPhase < 0.25)
                 {
                     moonHeading = "Waxing Crescent";
                     filePath = "/Images/Moon/WaxingCrescent.png";
                 }
 
-                else if (HourlyData.days[0].moonphase == 0.25)
+                else if (moonPhase == 0.25)
                 {
                     moonHeading = "First Quarter";
                     filePath = "/Images/Moon/FirstQuarter.jpg";
                 }
-                else if (HourlyData.days[0].moonphase >= 0.25 && HourlyData.days[0].moonphase < 0.5)
+                else if (moonPhase >= 0.25 && moonPhase < 0.5)
                 {
                     moonHeading = "Waxing Gibbous";
                 }
-                else if (HourlyData.days[0].moonphase == 0.5)
+                else if (moonPhase == 0.5)
                 {
                     moonHeading = "Full Moon";
                     filePath = "/Images/Moon/FullMoon.jpg";
                 }
-                else if (HourlyData.days[0].moonphase >= 0.5 && HourlyData.days[0].moonphase < 0.75)
+                else if (moonPhase >= 0.5 && moonPhase < 0.75)
                 {
                     moonHeading = "Waning Gibbous";
                 }
-                else if (HourlyData.days[0].moonphase == 0.75)
+                else if (moonPhase == 0.75)
                 {
                     moonHeading = "Last Quarter";
                 }
-                else if (HourlyData.days[0].moonphase >= 0.75 && HourlyData.days[0].moonphase < 0.97)
+                else if (moonPhase >= 0.75 && moonPhase < 0.97)
                 {
                     moonHeading = "Waning Crescent";
                     filePath = "/Images/Moon/WaningCrescent.jpg";
@@ -137,29 +143,17 @@ namespace Trail_Tracker_App.Pages.Mountains
                 }
                 moonPercentage *= 100;
 
-
-                string rise = WeatherData.days[0].moonrise;
-                // Parse the 24-hour format time to a DateTime object
-                DateTime time = DateTime.ParseExact(rise, "HH:mm:ss", null);
-                // Convert to 12-hour format with AM/PM
-                string rise12Hour = time.ToString("hh:mm:ss tt");
-                string set = WeatherData.days[0].moonset;
-                DateTime time2 = DateTime.ParseExact(set, "HH:mm:ss", null);
-                string set12Hour = time2.ToString("hh:mm:ss tt");
-
-
                 Moon moon = new Moon()
                 {
                     Heading = moonHeading,
-                    Moonrise = rise12Hour,
-                    Moonset = set12Hour,
+                    Moonrise = ConvertTime(WeatherData.days[0].moonrise),
+                    Moonset = ConvertTime(WeatherData.days[0].moonset),
                     Percent = moonPercentage,
                     FilePath = filePath,
                 };
-
+                
                 Moon = moon;
-
-
+                
 
                 if (WeatherData == null)
                 {
@@ -175,5 +169,56 @@ namespace Trail_Tracker_App.Pages.Mountains
                 return Page();
             }
         }
+
+
+        /// <summary>
+        /// Converts time from 24 hour format to 12 hour format. 
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        public string ConvertTime(string time)
+        {
+            string formatedTime = DateTime.ParseExact(time, "HH:mm:ss", null).ToString("hh:mm:ss tt");
+            return formatedTime;
+        }
+
+
+        public string Degrees2Direction(float degrees)
+        {
+            if (degrees >= 80 && degrees <= 100)
+            {
+                return "N";
+            }
+            else if (degrees >= 170 && degrees <= 190)
+            {
+                return "W";
+            }
+            else if (degrees >= 260 && degrees <= 280)
+            {
+                return "S";
+            }
+            else if (degrees >= 350 || degrees <= 10)
+            {
+                return "E";
+            }
+            else if (degrees > 10 && degrees < 80)
+            {
+                return "NE";
+            }
+            else if (degrees > 100 && degrees < 170)
+            {
+                return "NW";
+            }
+            else if (degrees > 190 && degrees < 260)
+            {
+                return "SW";
+            }
+            else
+            {
+                return "SE";
+            }
+        }
+
+
     }
 }

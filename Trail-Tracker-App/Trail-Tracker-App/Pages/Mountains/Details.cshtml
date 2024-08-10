@@ -101,7 +101,6 @@
                             <th>Visibility</th>
                             <th>Sunrise Time</th>
                             <th>Sunset Time</th>
-                            <th>Moonphase (remove)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -112,12 +111,11 @@
                             <td>@Model.HourlyData.days[0].feelslike °F</td>
                             <td>@($"{Model.HourlyData.days[0].windspeed} mph")</td>
                             <td>@($"{Model.HourlyData.days[0].windgust} mph")</td>
-                            <td>@Model.HourlyData.days[0].winddir</td>
+                            <td>@Model.Degrees2Direction(Model.HourlyData.days[0].winddir)</td>
                             <td>@Model.HourlyData.days[0].humidity %</td>
                             <td>@Model.HourlyData.days[0].visibility miles</td>
                             <td>@Model.HourlyData.days[0].sunrise</td>
                             <td>@Model.HourlyData.days[0].sunset</td>
-                            <td>@Model.HourlyData.days[0].moonphase</td>
                         </tr>
                     </tbody>
                 </table>
@@ -167,8 +165,8 @@
                 
                 <td>@Model.WeatherData.days[i].datetime.ToString()</td>
                 <td>@Model.WeatherData.days[i].description</td>
-                <td>@Model.WeatherData.days[i].tempmax</td>
-                <td>@Model.WeatherData.days[i].tempmin</td>
+                <td>@Model.WeatherData.days[i].tempmax °F</td>
+                <td>@Model.WeatherData.days[i].tempmin °F</td>
             </tr>
         }
     </tbody>

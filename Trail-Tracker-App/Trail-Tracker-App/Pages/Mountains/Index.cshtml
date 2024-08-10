@@ -12,6 +12,8 @@
 <p>
     <a asp-page="Create" class="btn btn-info" role="button">Create New</a>
 </p>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -35,7 +37,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Mountain) {
+@foreach (var item in Model.Mountain) 
+{
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -60,6 +63,7 @@
             </td>
         </tr>
 }
+
     </tbody>
 </table>
 

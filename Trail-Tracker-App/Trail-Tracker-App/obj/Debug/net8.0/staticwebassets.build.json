@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LUpItf5GuicR3aiRnN2D6W0vMA2527FuhJXq5OMVXpU=",
+  "Hash": "1opPOMzv/HtkN224H9HMSlGKDk+Y7Jq3hy25guGGYwg=",
   "Source": "Trail-Tracker-App",
   "BasePath": "_content/Trail-Tracker-App",
   "Mode": "Default",
@@ -2713,6 +2713,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\IMG_1779.JPG"
+    },
+    {
+      "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\IMG_2053 (1).jpeg",
+      "SourceId": "Trail-Tracker-App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\",
+      "BasePath": "_content/Trail-Tracker-App",
+      "RelativePath": "Uploads/IMG_2053 (1).jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\IMG_2053 (1).jpeg"
     },
     {
       "Identity": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\IMG_3403.JPEG",

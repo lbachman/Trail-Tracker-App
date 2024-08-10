@@ -11,5 +11,6 @@
         public float? Percent { get; set; }
 
         public string? FilePath { get; set; }
+
     }
 }
