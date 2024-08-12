@@ -9,14 +9,18 @@ namespace Trail_Tracker_App.Pages.MyProfile
     public class ProfileEditModel : PageModel
     {
         private readonly MountaintrailsContext _context;
+        private readonly IWebHostEnvironment _environment;
 
-        public ProfileEditModel(MountaintrailsContext context)
+        public ProfileEditModel(MountaintrailsContext context, IWebHostEnvironment environment)
         {
             _context = context;
+            _environment = environment;
         }
 
+        public Userprofile UserProfile { get; set; }
+
         [BindProperty]
-        public Userprofile Userprofile { get; set; } = default!;
+        public ProfileDTO ProfileDTO { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,13 +34,13 @@ namespace Trail_Tracker_App.Pages.MyProfile
             {
                 return NotFound();
             }
-            Userprofile = userprofile;
+            UserProfile = userprofile;
+
            ViewData["UserId"] = new SelectList(_context.Aspnetusers, "Id", "Id");
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -44,25 +48,29 @@ namespace Trail_Tracker_App.Pages.MyProfile
                 return Page();
             }
 
-            _context.Attach(Userprofile).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserprofileExists(Userprofile.UserProfileId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
 
-            return RedirectToPage("./Index");
+
+
+            //_context.Attach(Userprofile).State = EntityState.Modified;
+
+            //try
+            //{
+            //    await _context.SaveChangesAsync();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!UserprofileExists(Userprofile.UserProfileId))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
+
+            return RedirectToPage("./UserProfile");
         }
 
         private bool UserprofileExists(int id)

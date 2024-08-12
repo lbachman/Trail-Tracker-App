@@ -24,19 +24,15 @@
         </div>
     </div>
 </div>
-
+<div>
+    <a class="btn btn-outline-secondary" asp-page="./ProfileEdit" asp-route-id="@Model.Userprofile.UserProfileId">Edit Profile</a>
+</div>
 
 
 <div>
     <h4>Userprofile</h4>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Userprofile.ProfilePicture)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Userprofile.ProfilePicture)
-        </dd>
+    <dl class="row">       
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Userprofile.Bio)
         </dt>
@@ -45,9 +41,7 @@
         </dd>  
     </dl>
 </div>
-<div>
-    <a asp-page="./ProfileEdit" asp-route-id="@Model.Userprofile.UserProfileId">Edit</a> |
-</div>
+<hr>
 
 <h2>Uploads</h2>
 @* user picture list *@
