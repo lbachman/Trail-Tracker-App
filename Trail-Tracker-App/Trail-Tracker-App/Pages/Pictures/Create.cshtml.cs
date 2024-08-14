@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.Claims;
+using Trail_Tracker_App.Data;
 using Trail_Tracker_App.Entities;
 
 namespace Trail_Tracker_App.Pages.Pictures
@@ -10,11 +12,13 @@ namespace Trail_Tracker_App.Pages.Pictures
     {
         private readonly MountaintrailsContext _context;
         private readonly IWebHostEnvironment _environment;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public CreateModel(MountaintrailsContext context, IWebHostEnvironment environment)
+        public CreateModel(MountaintrailsContext context, IWebHostEnvironment environment, UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _environment = environment;
+            _userManager = userManager;
         }
 
         public IActionResult OnGet()
@@ -62,14 +66,14 @@ namespace Trail_Tracker_App.Pages.Pictures
                 // get trail id by name
                 var trail = _context.Trails.Where(x => x.Name == PictureDTO.TrailName).FirstOrDefault();
 
-                // get user id of currently logged user
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                // get user name of logged in user for heading
+                var user = User.Identity.Name;
 
                 var Picture = new Picture()
                 {
                     TrailId = trail.TrailId,
                     FilePath = $"/Uploads/{PictureDTO.FormFile.FileName}",
-                    UploadedBy = userId,
+                    UploadedBy = user,
                     UploadDate = dateTime,
                     
                 };

@@ -5,7 +5,7 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>@Model.Userprofile.UserId</h1>
+<h1>@Model.User.UserName</h1>
 
 
 @* Profile Picture *@
@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <dl class="row">
                         <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.User.Identity.Name)
+                            @Html.DisplayFor(model => model.User.UserName)
                         </dd>
                     </dl>
                 </div>
