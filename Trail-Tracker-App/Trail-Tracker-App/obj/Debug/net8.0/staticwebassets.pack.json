@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\Images\\Moon\\WaxingCrescent.png"
     },
     {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\WaxingGibbous.jpg",
+      "PackagePath": "staticwebassets\\Images\\Moon\\WaxingGibbous.jpg"
+    },
+    {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Images\\Moon\\moon-phases-explained.png",
       "PackagePath": "staticwebassets\\Images\\Moon\\moon-phases-explained.png"
     },
@@ -43,6 +47,22 @@
     {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\.gitkeep",
       "PackagePath": "staticwebassets\\Uploads\\.gitkeep"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\20240708_190041.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\20240708_190041.jpg"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\20240708_201859.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\20240708_201859.jpg"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\72AC3C0D-895E-439B-BACD-93A19966909E.jpeg",
+      "PackagePath": "staticwebassets\\Uploads\\72AC3C0D-895E-439B-BACD-93A19966909E.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\BeachPic.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\BeachPic.jpg"
     },
     {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\IMG_1482.JPG",
@@ -77,12 +97,20 @@
       "PackagePath": "staticwebassets\\Uploads\\IMG_3403.JPEG"
     },
     {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\ProfilePictures\\135.png",
+      "PackagePath": "staticwebassets\\Uploads\\ProfilePictures\\135.png"
+    },
+    {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\imageedit_11_5952536030.jpg",
       "PackagePath": "staticwebassets\\Uploads\\imageedit_11_5952536030.jpg"
     },
     {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\imageedit_1_3413977762.jpg",
       "PackagePath": "staticwebassets\\Uploads\\imageedit_1_3413977762.jpg"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\Uploads\\trim.F3C51E35-A966-45B3-B936-768DF47E4867.MOV",
+      "PackagePath": "staticwebassets\\Uploads\\trim.F3C51E35-A966-45B3-B936-768DF47E4867.MOV"
     },
     {
       "Id": "C:\\Users\\14239\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\wwwroot\\css\\site.css",

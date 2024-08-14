@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Trail_Tracker_App.Entities;
@@ -11,14 +7,17 @@ namespace Trail_Tracker_App.Pages.UserProfiles
 {
     public class DetailsModel : PageModel
     {
-        private readonly Trail_Tracker_App.Entities.MountaintrailsContext _context;
+        private readonly MountaintrailsContext _context;
 
-        public DetailsModel(Trail_Tracker_App.Entities.MountaintrailsContext context)
+        public DetailsModel(MountaintrailsContext context)
         {
             _context = context;
         }
 
         public Userprofile Userprofile { get; set; } = default!;
+
+        public List<Picture> PictureList { get; set; } = default!;
+        
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,6 +27,21 @@ namespace Trail_Tracker_App.Pages.UserProfiles
             }
 
             var userprofile = await _context.Userprofiles.FirstOrDefaultAsync(m => m.UserProfileId == id);
+
+
+
+
+            // add get username by asp id here for profile name
+
+
+
+
+
+
+            // get uploads of user
+            var pictureList = await _context.Pictures.Where(x => x.UploadedBy == userprofile.UserId).ToListAsync();
+            PictureList = pictureList;
+
             if (userprofile == null)
             {
                 return NotFound();

@@ -114,6 +114,7 @@ namespace Trail_Tracker_App.Pages.Mountains
                 else if (moonPhase >= 0.25 && moonPhase < 0.5)
                 {
                     moonHeading = "Waxing Gibbous";
+                    filePath = "/Images/Moon/WaxingGibbous.jpg";
                 }
                 else if (moonPhase == 0.5)
                 {

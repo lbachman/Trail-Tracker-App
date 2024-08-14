@@ -5,7 +5,7 @@
     ViewData["Title"] = "ProfileEdit";
 }
 
-<h1>ProfileEdit</h1>
+<h1>Edit Bio</h1>
 
 <h4>Userprofile</h4>
 <hr />
@@ -22,16 +22,16 @@
             </div> *@
 
             <div class="form-group">
-                <label asp-for="ProfileDTO.bio" class="control-label">Bio</label>
-                <input asp-for="ProfileDTO.bio" class="form-control" />
-                <span asp-validation-for="ProfileDTO.bio" class="text-danger"></span>
+                <label asp-for="UserProfile.Bio" class="control-label">Bio</label>
+                <input asp-for="UserProfile.Bio" class="form-control" />
+                <span asp-validation-for="UserProfile.Bio" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
+            @* <div class="form-group">
                 <label asp-for="ProfileDTO.pictureUpload" class="control-label">Profile Picture</label>
                 <input type="file" asp-for="ProfileDTO.pictureUpload" class="form-control" />
                 <span asp-validation-for="ProfileDTO.pictureUpload" class="text-danger"></span>
-            </div>
+            </div> *@
 
             <br>
             <div class="form-group">

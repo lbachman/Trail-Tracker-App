@@ -25,12 +25,13 @@
     </div>
 </div>
 <div>
-    <a class="btn btn-outline-secondary" asp-page="./ProfileEdit" asp-route-id="@Model.Userprofile.UserProfileId">Edit Profile</a>
+    <a class="btn btn-outline-secondary" asp-page="./ProfileEdit" asp-route-id="@Model.Userprofile.UserProfileId">Edit Bio</a>
+    <a class="btn btn-outline-secondary" asp-page="./ProfilePic" asp-route-id="@Model.Userprofile.UserProfileId">Set Profile Picture</a>
 </div>
 
 
 <div>
-    <h4>Userprofile</h4>
+    <h4>Bio</h4>
     <hr />
     <dl class="row">       
         <dt class="col-sm-2">
@@ -43,8 +44,13 @@
 </div>
 <hr>
 
-<h2>Uploads</h2>
+
 @* user picture list *@
+<h2>Uploads</h2>
+
+<a asp-page="../Pictures/Create" class="btn btn-primary">Create New</a>
+<br>
+<br>
 <div class="row">
     @foreach (var item in Model.PictureList)
     {
@@ -60,8 +66,9 @@
                 </a>
                 <div class="card-body">
                     <div class="btn-group" role="group">
-                        <a asp-page="./Edit" asp-route-id="@item.PictureId" class="btn btn-secondary">Edit</a>
-                        <a asp-page="./Delete" asp-route-id="@item.PictureId" class="btn btn-danger">Delete</a>
+                        <a asp-page="../Pictures/Edit" asp-route-id="@item.PictureId" class="btn btn-secondary">Edit</a>
+                        <a asp-page="./ProfileEdit" asp-route-id="@Model.Userprofile.UserProfileId" class="btn btn-primary">Set As Profile Picture</a>
+                        <a asp-page="../Pictures/Delete" asp-route-id="@item.PictureId" class="btn btn-danger">Delete</a>
                     </div>
                 </div>
             </div>
