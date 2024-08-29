@@ -12,14 +12,17 @@ namespace Trail_Tracker_App.Pages.Pictures
 {
     public class EditModel : PageModel
     {
-        private readonly Trail_Tracker_App.Entities.MountaintrailsContext _context;
+        private readonly MountaintrailsContext _context;
 
-        public EditModel(Trail_Tracker_App.Entities.MountaintrailsContext context)
+        public EditModel(MountaintrailsContext context)
         {
             _context = context;
         }
 
+        
         [BindProperty]
+        public PictureEditDTO PictureEditDTO { get; set; } = default!;
+
         public Picture Picture { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -30,17 +33,25 @@ namespace Trail_Tracker_App.Pages.Pictures
             }
 
             var picture =  await _context.Pictures.FirstOrDefaultAsync(m => m.PictureId == id);
+
+            var trail = await _context.Trails.FirstOrDefaultAsync(x => x.TrailId == picture.TrailId);
+
             if (picture == null)
             {
                 return NotFound();
             }
             Picture = picture;
-           ViewData["TrailId"] = new SelectList(_context.Trails, "TrailId", "TrailId");
+
+            PictureEditDTO = new PictureEditDTO()
+            {
+                TrailName = trail.Name,
+                PictureId = id
+            };
+
+            ViewData["TrailName"] = new SelectList(_context.Trails, "Name", "Name");
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -48,7 +59,12 @@ namespace Trail_Tracker_App.Pages.Pictures
                 return Page();
             }
 
-            _context.Attach(Picture).State = EntityState.Modified;
+            var trail = await _context.Trails.FirstOrDefaultAsync(x => x.Name == PictureEditDTO.TrailName);
+            Console.WriteLine($"PictureId: {PictureEditDTO.PictureId}");
+            var picture = await _context.Pictures.FirstOrDefaultAsync(y => y.PictureId == PictureEditDTO.PictureId);
+
+            picture.TrailId = trail.TrailId;
+            _context.Attach(picture).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +72,7 @@ namespace Trail_Tracker_App.Pages.Pictures
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PictureExists(Picture.PictureId))
+                if (!PictureExists(picture.PictureId))
                 {
                     return NotFound();
                 }
