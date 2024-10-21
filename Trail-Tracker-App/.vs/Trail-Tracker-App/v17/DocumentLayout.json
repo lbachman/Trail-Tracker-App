@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Logan\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB2B95FB-9D13-496A-BAC5-2730A6B4DDBC}|Trail-Tracker-App\\Trail-Tracker-App.csproj|c:\\users\\logan\\desktop\\trail-tracker-app\\trail-tracker-app\\trail-tracker-app\\pages\\pictures\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB2B95FB-9D13-496A-BAC5-2730A6B4DDBC}|Trail-Tracker-App\\Trail-Tracker-App.csproj|solutionrelative:trail-tracker-app\\pages\\pictures\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB2B95FB-9D13-496A-BAC5-2730A6B4DDBC}|Trail-Tracker-App\\Trail-Tracker-App.csproj|c:\\users\\logan\\desktop\\trail-tracker-app\\trail-tracker-app\\trail-tracker-app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FB2B95FB-9D13-496A-BAC5-2730A6B4DDBC}|Trail-Tracker-App\\Trail-Tracker-App.csproj|solutionrelative:trail-tracker-app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Logan\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\Pages\\Pictures\\Index.cshtml",
+              "RelativeDocumentMoniker": "Trail-Tracker-App\\Pages\\Pictures\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Logan\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\Pages\\Pictures\\Index.cshtml",
+              "RelativeToolTip": "Trail-Tracker-App\\Pages\\Pictures\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-03T14:35:56.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Logan\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Trail-Tracker-App\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Logan\\Desktop\\Trail-Tracker-App\\Trail-Tracker-App\\Trail-Tracker-App\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Trail-Tracker-App\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-03T14:25:06.685Z"
             }
           ]
         }

@@ -17,207 +17,207 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Trail_Tracker_App
 build_property.RootNamespace = Trail_Tracker_App
-build_property.ProjectDir = C:\Users\14239\Desktop\Trail-Tracker-App\Trail-Tracker-App\Trail-Tracker-App\
+build_property.ProjectDir = C:\Users\Logan\Desktop\Trail-Tracker-App\Trail-Tracker-App\Trail-Tracker-App\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\14239\Desktop\Trail-Tracker-App\Trail-Tracker-App\Trail-Tracker-App
+build_property.MSBuildProjectDirectory = C:\Users\Logan\Desktop\Trail-Tracker-App\Trail-Tracker-App\Trail-Tracker-App
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Error.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Index.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Create.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5SYW5nZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Delete.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5SYW5nZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Details.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5SYW5nZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Edit.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5SYW5nZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Index.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MountainRanges/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5SYW5nZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Create.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Delete.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Details.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Edit.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Index.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Mountains/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW91bnRhaW5zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MyProfile/ProfileEdit.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MyProfile/ProfileEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlQcm9maWxlXFByb2ZpbGVFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MyProfile/ProfilePic.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MyProfile/ProfilePic.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlQcm9maWxlXFByb2ZpbGVQaWMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MyProfile/UserProfile.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/MyProfile/UserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlQcm9maWxlXFVzZXJQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Create.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGljdHVyZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Delete.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGljdHVyZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Details.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGljdHVyZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Edit.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGljdHVyZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Index.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Pictures/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGljdHVyZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Privacy.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Shared/_LoginPartial.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Create.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Delete.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaWxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Details.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaWxzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Edit.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaWxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Index.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Trails/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Create.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclByb2ZpbGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Delete.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclByb2ZpbGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Details.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclByb2ZpbGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Edit.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclByb2ZpbGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Index.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/UserProfiles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclByb2ZpbGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/_ViewImports.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/_ViewStart.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/14239/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Shared/_Layout.cshtml]
+[C:/Users/Logan/Desktop/Trail-Tracker-App/Trail-Tracker-App/Trail-Tracker-App/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-3gbxijx60k
