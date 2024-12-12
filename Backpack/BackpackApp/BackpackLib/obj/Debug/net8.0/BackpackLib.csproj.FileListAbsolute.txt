@@ -1,0 +1,14 @@
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\bin\Debug\net8.0\BackpackLib.deps.json
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\bin\Debug\net8.0\BackpackLib.runtimeconfig.json
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\bin\Debug\net8.0\BackpackLib.dll
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\bin\Debug\net8.0\BackpackLib.pdb
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\BackpackLib.csproj.AssemblyReference.cache
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\BackpackLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\BackpackLib.AssemblyInfoInputs.cache
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\BackpackLib.AssemblyInfo.cs
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\BackpackLib.csproj.CoreCompileInputs.cache
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\BackpackLib.dll
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\refint\BackpackLib.dll
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\BackpackLib.pdb
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\BackpackLib.genruntimeconfig.cache
+C:\Users\14239\Desktop\Backpack\BackpackApp\BackpackLib\obj\Debug\net8.0\ref\BackpackLib.dll

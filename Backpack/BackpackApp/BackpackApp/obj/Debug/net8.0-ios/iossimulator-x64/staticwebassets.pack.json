@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Backpack\\BackpackApp\\BackpackApp\\obj\\Debug\\net8.0-ios\\iossimulator-x64\\scopedcss\\bundle\\BackpackApp.styles.css",
+      "PackagePath": "staticwebassets\\BackpackApp.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Backpack\\BackpackApp\\BackpackApp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Backpack\\BackpackApp\\BackpackApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Backpack\\BackpackApp\\BackpackApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Backpack\\BackpackApp\\BackpackApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\14239\\Desktop\\Backpack\\BackpackApp\\BackpackApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.BackpackApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.build.BackpackApp.props",
+      "PackagePath": "build\\BackpackApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.buildMultiTargeting.BackpackApp.props",
+      "PackagePath": "buildMultiTargeting\\BackpackApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.buildTransitive.BackpackApp.props",
+      "PackagePath": "buildTransitive\\BackpackApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

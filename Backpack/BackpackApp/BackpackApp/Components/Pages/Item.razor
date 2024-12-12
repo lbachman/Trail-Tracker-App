@@ -1,0 +1,79 @@
+﻿@page "/item"
+@using BackpackLib.Entities
+@using BackpackLib.Contexts
+@using Microsoft.EntityFrameworkCore
+@inject BackpackLib.Contexts.BackpackAppContext BackpackAppContext
+
+
+<h1>CreateItem</h1>
+
+<h4>Item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Item.SubbagId" class="control-label"></label>
+                <select asp-for="Item.SubbagId" class="form-control" asp-items="ViewBag.SubbagId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.BackpackId" class="control-label"></label>
+                <select asp-for="Item.BackpackId" class="form-control" asp-items="ViewBag.BackpackId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.Name" class="control-label"></label>
+                <input asp-for="Item.Name" class="form-control" />
+                <span asp-validation-for="Item.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.Description" class="control-label"></label>
+                <input asp-for="Item.Description" class="form-control" />
+                <span asp-validation-for="Item.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.Weight" class="control-label"></label>
+                <input asp-for="Item.Weight" class="form-control" />
+                <span asp-validation-for="Item.Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.PictureUrl" class="control-label"></label>
+                <input asp-for="Item.PictureUrl" class="form-control" />
+                <span asp-validation-for="Item.PictureUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+@code {
+	class ItemPage
+	{
+		private readonly BackpackAppContext _context;
+
+		public Item Item { get; set; } = default!;
+
+		public ItemPage(BackpackAppContext context)
+		{
+			_context = context;	
+		}
+
+		
+
+
+		public void GetItems()
+		{
+				
+		}
+
+	}
+
+
+}

@@ -1,0 +1,60 @@
+﻿@page
+@model BlazorCodeGen.Data.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Backpack[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Backpack[0].Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Backpack[0].CapacityLiters)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Backpack[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Backpack[0].CreatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Backpack) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CapacityLiters)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.BackpackId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.BackpackId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.BackpackId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
